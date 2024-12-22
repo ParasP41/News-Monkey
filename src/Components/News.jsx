@@ -45,7 +45,7 @@ export default function News(props) {
                 hasMore={article.length !== totalArticles}
                 loader={<Spinner />}
             >
-                <div className='md:grid md:grid-cols-4'>
+                <div className='md:grid md:grid-cols-4' style={props.DarkBody}>
                     {article.map((item, index) => {
                         return (<div key={index}>
                             <NewsData urlImg={item.urlToImage} source={item.source.name ? item.source.name.slice(0, 25) : "Unknow Source"} author={item.author ? item.author.slice(0, 25) : "XYZ-Reporter"} title={item.title} description={item.description} url={item.url} date={item.publishedAt}></NewsData>

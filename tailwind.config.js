@@ -6,10 +6,16 @@ export default {
     flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        NavBg:"1E3E62",
+
+      }
+    },
   },
   plugins: [
     flowbite.plugin(),
   ],
 }
+
 

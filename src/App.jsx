@@ -6,86 +6,102 @@ import { useState } from "react";
 function App(props) {
   const [progress, setProgress] = useState();
 
+  const [mode, setMode] = useState("Dark Mode");
+  const [darkNav, setDarkNav] = useState({
+    backgroundColor: "white",
+    color: "black",
+  });
+  const [darkBody, setDarkBody] = useState({
+    backgroundColor: "white",
+    color: "black",
+  });
+
+  const handlerMode = () => {
+    if (mode === "Dark Mode") {
+      setMode("Light Mode")
+      setDarkNav({
+        backgroundColor: "#262626",
+        color: "white",
+      })
+      setDarkBody({
+        backgroundColor: "#1a1a1a",
+        color: "white",
+      })
+    }
+    else {
+      setMode("Dark Mode")
+      setDarkNav({
+        backgroundColor: "white",
+        color: "black",
+      })
+      setDarkBody({
+        backgroundColor: "white",
+        color: "black",
+      })
+    }
+  }
+
   const router = createBrowserRouter([
     {
       path: '/',
       element: <div>
         <div >
-          <News setProgress={setProgress} category="general"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="general"></News>
         </div>
       </div>,
     },
     {
       path: '/sports',
-      element: <div>
+      element: <div >
         <div >
-          <News setProgress={setProgress} category="sports"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="sports"></News>
         </div>
       </div>,
     },
     {
       path: '/entertainment',
-      element: <div>
+      element: <div >
         <div >
-          <News setProgress={setProgress} category="entertainment"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="entertainment"></News>
         </div>
       </div>,
     },
     {
       path: '/science',
-      element: <div>
+      element: <div >
         <div >
-          <News setProgress={setProgress} category="science"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="science"></News>
         </div>
       </div>,
     },
     {
       path: '/business',
-      element: <div>
+      element: <div >
         <div >
-          <News setProgress={setProgress} category="business"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="business"></News>
         </div>
       </div>,
     },
     {
       path: '/health',
-      element: <div>
+      element: <div >
         <div >
-          <News setProgress={setProgress} category="health"></News>
+          <News setProgress={setProgress} DarkBody={darkBody} category="health"></News>
         </div>
       </div>,
     },
   ]);
 
-    const [mode, setMode] = useState("Dark Mode");
-    const [nbg ,setNbg]=useState("white")
-    const [ntext ,setNtext]=useState("black")
-    const handlerMode = () => {
-      if (mode==="Dark Mode") {
-        setMode("Light Mode")
-        setNbg("black")
-        setNtext("white")
-        document.body.style.backgroundColor="#202020"
-        document.body.style.color="white"
-      }
-      else {
-        setMode("Dark Mode")
-        setNbg("white")
-        setNtext("black")
-        document.body.style.backgroundColor="white"
-        document.body.style.color="black"
-      }
-    }
   return (
     <>
-      <Nav mode={mode} handlerMode={handlerMode} nbg={nbg} ntext={ntext}></Nav>
-      <h1 className="text-center md:my-8 my-4 text-2xl md:text-4xl font-bold">Today's Top Headlines</h1>
+      <Nav mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
       <LoadingBar
         height={3}
         color='#f11946'
-        progress={progress} 
+        progress={progress}
       />
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
 
     </>
   )
