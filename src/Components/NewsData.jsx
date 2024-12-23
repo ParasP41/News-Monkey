@@ -4,7 +4,7 @@ export default function NewsData(props) {
 
     return (
         
-        <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 md:px-9 '>
+        <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5 md:px-9'>
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <img className="rounded-t-lg" src={props.urlImg ? props.urlImg : "https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg"} alt="" />
                 <div className="p-5">

@@ -94,7 +94,7 @@ function App(props) {
 
   return (
     <>
-      <Nav mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
       <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
       <LoadingBar
         height={3}

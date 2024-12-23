@@ -7,10 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        NavBg:"1E3E62",
-
-      }
     },
   },
   plugins: [
