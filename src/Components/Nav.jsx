@@ -1,9 +1,9 @@
 import { Navbar } from "flowbite-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export function Nav(props) {
   return (
     <Navbar className='rounded-none w-full shadow-md' style={props.DarkNav} fluid rounded>
-        <a href="/" className='block md:text-3xl underline md:bg-transparent  text-[20px] font-bold md:p-0 ' aria-current="page">NewsMonkey</a>
+        <Link to="/" className='block md:text-3xl underline md:bg-transparent  text-[20px] font-bold md:p-0 ' aria-current="page">NewsMonkey</Link>
       <div className="flex md:order-2">
         <div className="flex max-w-md  flex-col ml-14 items-start gap-4">
           <label className="inline-flex  items-center m cursor-pointer">
@@ -16,19 +16,19 @@ export function Nav(props) {
       <Navbar.Toggle />
       <Navbar.Collapse >
         <li>
-          <a href="/sports" className="block underline py-2 px-3  rounded md:bg-transparent  hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Sports</a>
+          <Link to="/sports" className="block underline py-2 px-3  rounded md:bg-transparent  hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Sports</Link>
         </li>
         <li>
-          <a href="/entertainment" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Entertainment</a>
+          <Link to="/entertainment" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Entertainment</Link>
         </li>
         <li>
-          <a href="/science" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Science</a>
+          <Link to="/science" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Science</Link>
         </li>
         <li>
-          <a href="/business" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Business</a>
+          <Link to="/business" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Business</Link>
         </li>
         <li>
-          <a href="/health" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Health</a>
+          <Link to="/health" className="block underline py-2 px-3 rounded md:bg-transparent md:hover:text-blue-600 md:text-[19px] font-bold md:p-0 " aria-current="page">Health</Link>
         </li>
       </Navbar.Collapse>
     </Navbar>

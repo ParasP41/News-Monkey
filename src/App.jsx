@@ -45,6 +45,13 @@ function App(props) {
     {
       path: '/',
       element: <div>
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="general"></News>
         </div>
@@ -53,6 +60,13 @@ function App(props) {
     {
       path: '/sports',
       element: <div >
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="sports"></News>
         </div>
@@ -61,6 +75,13 @@ function App(props) {
     {
       path: '/entertainment',
       element: <div >
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="entertainment"></News>
         </div>
@@ -69,6 +90,13 @@ function App(props) {
     {
       path: '/science',
       element: <div >
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="science"></News>
         </div>
@@ -77,6 +105,13 @@ function App(props) {
     {
       path: '/business',
       element: <div >
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="business"></News>
         </div>
@@ -85,6 +120,13 @@ function App(props) {
     {
       path: '/health',
       element: <div >
+         <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
+      <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={progress}
+      />
         <div >
           <News setProgress={setProgress} DarkBody={darkBody} category="health"></News>
         </div>
@@ -94,13 +136,13 @@ function App(props) {
 
   return (
     <>
-      <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
+      {/* <Nav  mode={mode} handlerMode={handlerMode} DarkNav={darkNav} ></Nav>
       <h1 className="text-center underline md:py-6 py-2 text-2xl md:text-4xl text-black h-full font-bold" style={darkBody}>Today's Top Headlines</h1>
       <LoadingBar
         height={3}
         color='#f11946'
         progress={progress}
-      />
+      /> */}
       <RouterProvider router={router} />
 
     </>
