@@ -1,4 +1,4 @@
-# 💫 About Me:
+# 💫 News-Monkey:
 🐵 Monkey App<br>Monkey App is a real-time web application that delivers the latest news updates across various categories through an API. Stay informed with up-to-the-minute news from reliable sources, all in one place!<br><br>🚀 Features<br>✅ Real-time news updates from different categories<br>✅ Fast & responsive UI powered by React & Tailwind CSS<br>✅ API-driven content for accurate and fresh news<br>✅ User-friendly interface for seamless browsing
 
 
